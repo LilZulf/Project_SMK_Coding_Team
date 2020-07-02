@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_margin_1">4dp</dimen>
+    <dimen name="def_margin_2">6dp</dimen>
+    <dimen name="def_margin_3">8dp</dimen>
+    <dimen name="def_margin_4">10dp</dimen>
+    <dimen name="def_margin_5">12dp</dimen>
+    <dimen name="def_margin_6">14dp</dimen>
+</resources>
