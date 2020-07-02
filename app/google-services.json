@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "476808791721",
+    "firebase_url": "https://mubarak-942f2.firebaseio.com",
+    "project_id": "mubarak-942f2",
+    "storage_bucket": "mubarak-942f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476808791721:android:326affe2bc4fb092788bb8",
+        "android_client_info": {
+          "package_name": "com.github.smkcoding.mubarak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476808791721-e40h1hqngahjaaqt7gdfenl6im32gk9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.smkcoding.mubarak",
+            "certificate_hash": "663e1bd37105a3a4fbc3509a7a3954063428f1ba"
+          }
+        },
+        {
+          "client_id": "476808791721-4ted1lgvkplg71425qt7ge8fc410rnv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7h1ie15mwidOIe5XJQ1n4NbX34NwRKug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476808791721-4ted1lgvkplg71425qt7ge8fc410rnv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
