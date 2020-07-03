@@ -1,12 +1,15 @@
 package com.github.smkcoding.mubarak.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.smkcoding.mubarak.R
+import com.github.smkcoding.mubarak.activity.WebViewActivity
 import com.github.smkcoding.mubarak.model.HasilItem
 import com.github.smkcoding.mubarak.model.SurahModel
 import kotlinx.android.extensions.LayoutContainer
@@ -41,13 +44,13 @@ List<HasilItem>, var listener: (HasilItem)-> Unit) :
                 itemView.tvDetail.text = item.type + " | "+item.ayat+" ayat"
                  itemView.tvAsma.text = item.asma
                 //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
-//                val bundle = Bundle()
-//                bundle.putString("latitude", item.latitude)
-//                bundle.putString("longitude",item.longitude)
-//                val i = Intent(context, MapsActivity::class.java)
-//                i.putExtras(bundle)
-//                context.startActivity(i)
-
+                itemView.parentCard.setOnClickListener {
+                    val bundle = Bundle()
+                    bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
+                    val i = Intent(context, WebViewActivity::class.java)
+                    i.putExtras(bundle)
+                    context.startActivity(i)
+                }
         }
     }
 }
