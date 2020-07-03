@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.github.smkcoding.mubarak.activity.MasjidActivity
 
 import com.github.smkcoding.mubarak.R
+import com.github.smkcoding.mubarak.activity.Kajian
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -32,6 +33,12 @@ class homeFragment : Fragment() {
             val intent = Intent(context, MasjidActivity::class.java)
             //intent.putExtra("year",btYear.text.toString())
             startActivity(intent)
+        }
+
+        btn_kajian.setOnClickListener {
+            val intent = Intent(context,Kajian::class.java)
+            startActivity(intent)
+
         }
     }
 
