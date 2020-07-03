@@ -3,12 +3,10 @@ package com.github.smkcoding.mubarak.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.smkcoding.mubarak.Model.YoutubeModel
 import com.github.smkcoding.mubarak.R
-import com.github.smkcoding.mubarak.YoutubePlay
 import com.github.smkcoding.mubarak.adapter.YoutubeListAdapter
 import com.github.smkcoding.mubarak.constants.AppConstants
 import com.google.gson.GsonBuilder

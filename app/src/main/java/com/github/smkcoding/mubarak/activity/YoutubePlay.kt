@@ -1,8 +1,9 @@
-package com.github.smkcoding.mubarak
+package com.github.smkcoding.mubarak.activity
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.smkcoding.mubarak.Model.YoutubeModel
+import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.Util.toast
 import com.github.smkcoding.mubarak.adapter.YoutubeListAdapter
 import com.github.smkcoding.mubarak.constants.AppConstants
