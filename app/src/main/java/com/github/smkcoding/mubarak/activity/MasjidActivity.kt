@@ -1,10 +1,10 @@
-package com.github.smkcoding.mubarak
+package com.github.smkcoding.mubarak.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.adapter.MasjidAdapter
 import com.github.smkcoding.mubarak.model.MasjidModel
 import com.google.firebase.database.*

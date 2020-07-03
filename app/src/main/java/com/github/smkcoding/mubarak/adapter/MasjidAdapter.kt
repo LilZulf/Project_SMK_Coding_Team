@@ -1,15 +1,16 @@
 package com.github.smkcoding.mubarak.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.github.smkcoding.mubarak.activity.MapsActivity
 import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.model.MasjidModel
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.card_masjid.*
 import kotlinx.android.synthetic.main.card_masjid.view.*
 
 
@@ -39,7 +40,13 @@ List<MasjidModel>, var listener: (MasjidModel)-> Unit) :
            itemView.tvName.text = item.nama
             itemView.tvAddress.text = item.alamat
             itemView.rlItem.setOnClickListener {
-                Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
+                //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
+                val bundle = Bundle()
+                bundle.putString("latitude", item.latitude)
+                bundle.putString("longitude",item.longitude)
+                val i = Intent(context, MapsActivity::class.java)
+                i.putExtras(bundle)
+                context.startActivity(i)
             }
         }
     }

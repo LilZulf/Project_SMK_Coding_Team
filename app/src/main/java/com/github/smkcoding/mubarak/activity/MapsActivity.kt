@@ -1,7 +1,8 @@
-package com.github.smkcoding.mubarak
+package com.github.smkcoding.mubarak.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.github.smkcoding.mubarak.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -21,10 +22,13 @@ class MapsActivity : AppCompatActivity(),OnMapReadyCallback {
     }
 
     override fun onMapReady(p0: GoogleMap?) {
-        val sydney = LatLng(-8.075741, 112.640941)
+        val intentData = intent.extras
+        val latitde = intentData!!.getString("latitude")
+        val longitude = intentData!!.getString("longitude")
+        val sydney = LatLng(latitde!!.toDouble(), longitude!!.toDouble())
         p0 ?: return
         with(p0) {
-            moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 256F))
+            moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 17F))
             addMarker(MarkerOptions().position(sydney))
         }
     }
