@@ -70,7 +70,13 @@
                         android:layout_height="@dimen/_50sdp"
                         android:background="@drawable/bg_circle_green"
                         >
-
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_mosque"
+                            android:layout_centerInParent="true"
+                            android:tint="#ffffff"
+                            />
                     </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,9 +158,22 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         />
                 </LinearLayout>
-
             </LinearLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="Artikel terbaru"
+                android:textSize="@dimen/_20ssp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:textColor="@color/black"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                />
         </LinearLayout>
     </ScrollView>
 

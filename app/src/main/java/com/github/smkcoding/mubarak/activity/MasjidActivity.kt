@@ -9,6 +9,7 @@ import com.github.smkcoding.mubarak.adapter.MasjidAdapter
 import com.github.smkcoding.mubarak.model.MasjidModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_masjid.*
+import kotlinx.android.synthetic.main.components_basic_actionbar.*
 
 class MasjidActivity : AppCompatActivity() {
     lateinit var ref : DatabaseReference
@@ -17,7 +18,9 @@ class MasjidActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_masjid)
         ref = FirebaseDatabase.getInstance().getReference()
+        action_bar_title.text = "Masjid"
         getMasjidFirebase()
+
     }
     private fun getMasjidFirebase(){
 
