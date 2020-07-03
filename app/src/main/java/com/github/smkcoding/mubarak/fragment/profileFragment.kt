@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.github.smkcoding.mubarak.R
+import kotlinx.android.synthetic.main.components_basic_actionbar.*
 
 /**
  * A simple [Fragment] subclass.
@@ -19,6 +20,13 @@ class profileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+
+        viewProps()
+    }
+
+    private fun viewProps() {
+        action_bar_title.setText("Profile")
+        action_gear.visibility = View.VISIBLE
     }
 
 }
