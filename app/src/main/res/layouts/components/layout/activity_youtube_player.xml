@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YoutubePlay">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/yt_pv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"/>
+
+    <TextView
+        android:id="@+id/vertical_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:text="Video Terkait"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp" />
+
+    <include layout="@layout/components_stripe" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_video_playlist"
+        android:padding="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".activity.Kajian">
 
     <LinearLayout
@@ -13,87 +14,53 @@
 
         <include layout="@layout/components_basic_actionbar" />
 
-        <!--    Channel Section-->
-        <LinearLayout
+        <TextView
+            android:id="@+id/horizontal_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:fontFamily="@font/medium"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:text="Live Playlist"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
 
-            <!--        Channel info-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/_20sdp"
-                android:paddingRight="@dimen/_20sdp"
-                android:paddingTop="@dimen/_10sdp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_horizontal_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_20sdp" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:cardCornerRadius="50dp">
 
-                    <ImageView
-                        android:id="@+id/image_channel"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_launcher_background" />
+        <include layout="@layout/components_stripe" />
 
-                </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/vertical_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:text="Tentang Islam"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/channel_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/medium"
-                        android:text="Nu Channel"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_16ssp" />
-
-                    <TextView
-                        android:id="@+id/channel_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/regular"
-                        android:text="Info PBNU"
-                        android:textSize="14dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--        Temp Channel Video-->
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_vertical_channel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_20sdp"
-                android:scrollbars="none">
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_20sdp" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/_20sdp">
-
-                    <include layout="@layout/item_horizontal_channel" />
-
-                    <include layout="@layout/item_horizontal_channel" />
-
-                </LinearLayout>
-
-
-            </HorizontalScrollView>
-
-        </LinearLayout>
-        <!--    End channel section-->
+        </RelativeLayout>
 
         <include layout="@layout/components_stripe" />
 
@@ -101,22 +68,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/medium"
-            android:paddingTop="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_15sdp"
             android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_15sdp"
             android:paddingRight="@dimen/_20sdp"
-            android:text="@string/kajian_news_section"
+            android:paddingBottom="@dimen/_15sdp"
+            android:text="Channel Masjid"
             android:textColor="@color/black"
             android:textSize="@dimen/_16ssp" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_masjid_channel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_20sdp">
-
-            <include layout="@layout/item_article" />
-
-        </LinearLayout>
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp" />
 
     </LinearLayout>
 
