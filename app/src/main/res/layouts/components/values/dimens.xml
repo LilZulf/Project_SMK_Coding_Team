@@ -6,4 +6,7 @@
     <dimen name="def_margin_4">10dp</dimen>
     <dimen name="def_margin_5">12dp</dimen>
     <dimen name="def_margin_6">14dp</dimen>
+
+    <dimen name="def_margin">16dp</dimen>
+    <dimen name="def_margin_half">8dp</dimen>
 </resources>
