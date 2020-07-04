@@ -93,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginLeft="@dimen/_20sdp"
+                    android:id="@+id/btnDoa"
                     >
                     <RelativeLayout
                         android:layout_width="@dimen/_50sdp"
@@ -116,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginLeft="@dimen/_20sdp"
-                    >
+                    android:id="@+id/btnKisahNabi">
                     <RelativeLayout
                         android:layout_width="@dimen/_50sdp"
                         android:layout_height="@dimen/_50sdp"

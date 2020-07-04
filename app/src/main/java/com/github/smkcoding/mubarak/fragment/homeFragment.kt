@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import com.github.smkcoding.mubarak.activity.MasjidActivity
 
 import com.github.smkcoding.mubarak.R
+import com.github.smkcoding.mubarak.activity.DoaActivity
+import com.github.smkcoding.mubarak.activity.KisahActivity
 import com.github.smkcoding.mubarak.activity.Kajian
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -39,6 +41,14 @@ class homeFragment : Fragment() {
             val intent = Intent(context,Kajian::class.java)
             startActivity(intent)
 
+        }
+        btnDoa.setOnClickListener {
+            val intent = Intent(context, DoaActivity::class.java)
+            startActivity(intent)
+        }
+        btnKisahNabi.setOnClickListener {
+            val intent = Intent(context, KisahActivity::class.java)
+            startActivity(intent)
         }
     }
 

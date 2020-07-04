@@ -56,7 +56,7 @@ class YoutubePlay : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
                 }
 
                 override fun onResponse(call: Call, response: Response) {
-                    val body = response.body?.string()
+                    val body = response.body()?.string()
 
                     val gson = GsonBuilder().create()
                     val youtubelist = gson.fromJson(body, YoutubeModel::class.java)

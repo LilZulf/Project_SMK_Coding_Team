@@ -51,7 +51,7 @@ class Kajian : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string()
+                val body = response.body().toString()
 
                 val gson = GsonBuilder().create()
                 val youtubelist = gson.fromJson(body, YoutubeModel::class.java)
@@ -96,7 +96,7 @@ class Kajian : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string()
+                val body = response.body()?.string()
 
                 val gson = GsonBuilder().create()
                 val youtubelist = gson.fromJson(body, YoutubeModel::class.java)
@@ -141,7 +141,7 @@ class Kajian : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string()
+                val body = response.body()?.string()
 
                 val gson = GsonBuilder().create()
                 val youtubelist = gson.fromJson(body, YoutubeModel::class.java)
