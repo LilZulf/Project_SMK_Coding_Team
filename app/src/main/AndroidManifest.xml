@@ -17,14 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.WebViewActivity"/>
         <activity android:name=".activity.MasjidActivity" />
         <activity android:name=".activity.MapsActivity" />
-        <activity android:name=".activity.Kajian"></activity>
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Kajian"/>
+        <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.YoutubePlay"/>
+        <activity android:name=".activity.YoutubePlay" />
         <activity android:name=".activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

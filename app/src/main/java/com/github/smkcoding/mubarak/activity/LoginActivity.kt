@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 
-
 import com.github.smkcoding.mubarak.R
 import com.google.firebase.auth.FirebaseAuth
 
@@ -100,7 +99,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
                 finish()
             } else { //Jika gagal login
-
                 Toast.makeText(this, "Login Dibatalkan", Toast.LENGTH_SHORT).show()
             }
         }
