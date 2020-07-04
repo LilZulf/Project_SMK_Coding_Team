@@ -51,7 +51,7 @@ List<TbSurahModel>,var listener: (TbSurahModel)-> Unit) :
                 val bundle = Bundle()
                 bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
                 bundle.putString("title", item.nama)
-                bundle.putString("type", "SURAH")
+                bundle.putString("type", "BOOKMARK")
                 bundle.putString("tipeSurah",item.type)
                 bundle.putString("ayat",item.ayat)
                 bundle.putString("nomor", item.nomor)

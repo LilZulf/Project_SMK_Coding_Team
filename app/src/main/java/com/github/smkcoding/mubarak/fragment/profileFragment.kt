@@ -47,7 +47,7 @@ class profileFragment : Fragment() {
     }
 
     private fun viewProps() {
-        action_bar_title.setText("Profile")
+        action_bar_title.text = "Profile"
         action_gear.visibility = View.VISIBLE
     }
 

@@ -6,7 +6,7 @@
     tools:context=".fragment.homeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -100,7 +100,13 @@
                         android:layout_height="@dimen/_50sdp"
                         android:background="@drawable/bg_circle_green"
                         >
-
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_religion"
+                            android:layout_centerInParent="true"
+                            android:tint="#ffffff"
+                            />
                     </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -123,7 +129,13 @@
                         android:layout_height="@dimen/_50sdp"
                         android:background="@drawable/bg_circle_green"
                         >
-
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_story"
+                            android:layout_centerInParent="true"
+                            android:tint="#ffffff"
+                            />
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -148,7 +160,13 @@
                         android:layout_height="@dimen/_50sdp"
                         android:background="@drawable/bg_circle_green"
                         >
-
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_video"
+                            android:layout_centerInParent="true"
+                            android:tint="#ffffff"
+                            />
                     </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -172,12 +190,15 @@
                 />
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginHorizontal="@dimen/_20sdp"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/rcArticle"
                 />
+
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </FrameLayout>

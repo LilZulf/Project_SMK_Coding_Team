@@ -15,6 +15,7 @@ import com.github.smkcoding.mubarak.adapter.SurahAdapter
 import com.github.smkcoding.mubarak.model.SurahModel
 import com.github.smkcoding.mubarak.retrofit.RequestRetrofit
 import com.github.smkcoding.mubarak.viewmodel.BookmarkViewModel
+import kotlinx.android.synthetic.main.components_basic_actionbar.*
 import kotlinx.android.synthetic.main.fragment_book.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,6 +36,7 @@ class bookFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getSurah()
+        action_bar_title.text = "Al - Quran"
 //        val myWebView: WebView = webView
 //        myWebView.webViewClient = object : WebViewClient() {
 //            override fun shouldOverrideUrlLoading(

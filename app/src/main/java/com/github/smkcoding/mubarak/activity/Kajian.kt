@@ -37,7 +37,7 @@ class Kajian : AppCompatActivity() {
         rv_masjid_channel.layoutManager = LinearLayoutManager(this)
         rv_masjid_channel.hasFixedSize()
         // Set action bar title
-        action_bar_title.setText(getString(R.string.kajian_screen_title))
+        action_bar_title.text = getString(R.string.kajian_screen_title)
     }
 
     private fun HorizontalList() {

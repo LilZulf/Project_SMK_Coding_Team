@@ -9,7 +9,7 @@ import com.github.smkcoding.mubarak.model.TbSurahModel
 
 @Database(entities = arrayOf(TbSurahModel::class), version = 1,
     exportSchema = false)
-public abstract class BookmarkDatabase : RoomDatabase() {
+abstract class BookmarkDatabase : RoomDatabase() {
     abstract fun myFriendDao(): BookmarkDao
     companion object {
         // Singleton prevents multiple instances of database opening at the

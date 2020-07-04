@@ -24,7 +24,7 @@ class MapsActivity : AppCompatActivity(),OnMapReadyCallback {
     override fun onMapReady(p0: GoogleMap?) {
         val intentData = intent.extras
         val latitde = intentData!!.getString("latitude")
-        val longitude = intentData!!.getString("longitude")
+        val longitude = intentData.getString("longitude")
         val sydney = LatLng(latitde!!.toDouble(), longitude!!.toDouble())
         p0 ?: return
         with(p0) {

@@ -39,7 +39,7 @@ class KisahActivity : AppCompatActivity() {
         callKisah()
     }
     private fun callKisah() {
-        showLoading(this!!, swipeRefreshLayout)
+        showLoading(this, swipeRefreshLayout)
         val httpClient = httpClient()
         val apiRequest = apiRequest<KisahNabiService>(httpClient, "http://smkcoding.tk/")
         val call = apiRequest.getKisahNabi()
@@ -70,13 +70,13 @@ class KisahActivity : AppCompatActivity() {
     }
     private fun tampilKisahNabi(covCou: List<KisahNabiItem>) {
         listKisah.layoutManager = LinearLayoutManager(this)
-        listKisah.adapter = KisahNabiAdapter(this!!, covCou) {
+        listKisah.adapter = KisahNabiAdapter(this, covCou) {
             val kisahNabi = it
             SessionData.Session(this)
             SessionData["id"] = kisahNabi.id.toString()
             val intent = Intent(this, DetailKisahNabiActivity::class.java)
             startActivity(intent)
-            toast(this!!, kisahNabi.nama)
+            toast(this, kisahNabi.nama)
         }
     }
     override fun onDestroy() {

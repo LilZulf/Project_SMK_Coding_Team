@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val adapter = ViewPagerAdapter(this)
 
-        viewPager.setAdapter(adapter)
+        viewPager.adapter = adapter
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy {
                 tab, position ->
             tab.text = menuTeks[position]

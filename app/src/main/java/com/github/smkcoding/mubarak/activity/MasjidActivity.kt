@@ -17,7 +17,7 @@ class MasjidActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_masjid)
-        ref = FirebaseDatabase.getInstance().getReference()
+        ref = FirebaseDatabase.getInstance().reference
         action_bar_title.text = "Masjid"
         getMasjidFirebase()
 

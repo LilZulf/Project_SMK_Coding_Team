@@ -6,19 +6,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.smkcoding.mubarak.activity.MasjidActivity
-
+import com.google.firebase.database.*
 import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.activity.DoaActivity
 import com.github.smkcoding.mubarak.activity.KisahActivity
 import com.github.smkcoding.mubarak.activity.Kajian
+import com.github.smkcoding.mubarak.adapter.ArticleAdapter
+import com.github.smkcoding.mubarak.model.ArticleModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class homeFragment : Fragment() {
-
+    lateinit var ref : DatabaseReference
+    lateinit var dataTarget : ArrayList<ArticleModel>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +35,8 @@ class homeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        ref = FirebaseDatabase.getInstance().reference
+        getArticleFirebase()
         btMasjid.setOnClickListener {
             val intent = Intent(context, MasjidActivity::class.java)
             //intent.putExtra("year",btYear.text.toString())
@@ -50,6 +56,29 @@ class homeFragment : Fragment() {
             val intent = Intent(context, KisahActivity::class.java)
             startActivity(intent)
         }
+    }
+    private fun getArticleFirebase(){
+
+        ref
+            .child("Artikel")
+            .addValueEventListener( object :
+                ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
+                    Toast.makeText(requireContext() ,"Database Error yaa..." ,
+                        Toast. LENGTH_SHORT ).show()
+                }
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    dataTarget = java.util.ArrayList()
+                    for (snapshot in dataSnapshot. children ) {
+                        //Mapping data pada DataSnapshot ke dalam objek mahasiswa
+                        val target = snapshot.getValue(ArticleModel:: class . java )
+                        target?.key = snapshot.key!!
+                        dataTarget.add(target!!)
+                    }
+                    rcArticle.layoutManager = LinearLayoutManager(requireContext())
+                    rcArticle.adapter = ArticleAdapter(requireContext(),dataTarget){}
+                }
+            })
     }
 
 }
