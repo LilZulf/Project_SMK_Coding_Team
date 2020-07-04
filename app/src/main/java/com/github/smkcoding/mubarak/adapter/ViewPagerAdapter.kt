@@ -10,14 +10,13 @@ import com.github.smkcoding.mubarak.fragment.profileFragment
 
 class ViewPagerAdapter(fragmentActivity : FragmentActivity): FragmentStateAdapter(fragmentActivity){
 
-    private val JumlahMenu = 4
+    private val JumlahMenu = 3
 
     override fun createFragment(position: Int): Fragment {
         when(position){
             0 -> {return homeFragment()}
-            1 -> {return articleFragment()}
-            2 -> {return bookFragment()}
-            3 -> {return  profileFragment()}
+            1 -> {return bookFragment()}
+            2 -> {return  profileFragment()}
             else -> {
                 return articleFragment()
             }
