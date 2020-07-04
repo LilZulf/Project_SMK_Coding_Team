@@ -18,9 +18,9 @@ import com.github.smkcoding.mubarak.viewmodel.BookmarkViewModel
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_surah.view.*
 
-class SurahAdapter(private val context: Context, private var items:
-List<HasilItem>,var listener: (HasilItem)-> Unit) :
-    RecyclerView.Adapter<SurahAdapter.ViewHolder>() {
+class BookmarkAdapter(private val context: Context, private var items:
+List<TbSurahModel>,var listener: (TbSurahModel)-> Unit) :
+    RecyclerView.Adapter<BookmarkAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
             context, LayoutInflater.from(context).inflate(
@@ -41,26 +41,26 @@ List<HasilItem>,var listener: (HasilItem)-> Unit) :
 
     class ViewHolder(val context: Context, override val containerView: View) :
         RecyclerView.ViewHolder(containerView), LayoutContainer {
-        fun bindItem(item:HasilItem, listener: (HasilItem) -> Unit) {
+        fun bindItem(item:TbSurahModel, listener: (TbSurahModel) -> Unit) {
 
-                itemView.tvName.text = item.nama
-                itemView.tvNumber.text = item.nomor
-                itemView.tvDetail.text = item.type + " | "+item.ayat+" ayat"
-                 itemView.tvAsma.text = item.asma
-                itemView.parentCard.setOnClickListener {
-                    val bundle = Bundle()
-                    bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
-                    bundle.putString("title", item.nama)
-                    bundle.putString("type", "SURAH")
-                    bundle.putString("tipeSurah",item.type)
-                    bundle.putString("ayat",item.ayat)
-                    bundle.putString("nomor", item.nomor)
-                    bundle.putString("asma",item.asma)
-                    val i = Intent(context, WebViewActivity::class.java)
-                    i.putExtras(bundle)
-                    context.startActivity(i)
-                }
-                //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
+            itemView.tvName.text = item.nama
+            itemView.tvNumber.text = item.nomor
+            itemView.tvDetail.text = item.type + " | "+item.ayat+" ayat"
+            itemView.tvAsma.text = item.asma
+            itemView.parentCard.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
+                bundle.putString("title", item.nama)
+                bundle.putString("type", "SURAH")
+                bundle.putString("tipeSurah",item.type)
+                bundle.putString("ayat",item.ayat)
+                bundle.putString("nomor", item.nomor)
+                bundle.putString("asma",item.asma)
+                val i = Intent(context, WebViewActivity::class.java)
+                i.putExtras(bundle)
+                context.startActivity(i)
+            }
+            //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
 
         }
     }

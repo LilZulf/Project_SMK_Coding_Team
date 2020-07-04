@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.adapter.SurahAdapter
 import com.github.smkcoding.mubarak.model.SurahModel
 import com.github.smkcoding.mubarak.retrofit.RequestRetrofit
+import com.github.smkcoding.mubarak.viewmodel.BookmarkViewModel
 import kotlinx.android.synthetic.main.fragment_book.*
 import retrofit2.Call
 import retrofit2.Callback

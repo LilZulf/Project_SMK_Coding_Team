@@ -86,8 +86,7 @@
             android:id="@+id/rv_bookmark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/_20sdp"
-            android:paddingVertical="@dimen/_15sdp" />
+            />
 
         <LinearLayout
             android:id="@+id/btn_bookmarkscreen"
