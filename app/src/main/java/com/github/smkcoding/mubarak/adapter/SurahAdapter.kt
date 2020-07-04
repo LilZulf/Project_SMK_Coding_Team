@@ -1,5 +1,6 @@
 package com.github.smkcoding.mubarak.adapter
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -43,14 +44,35 @@ List<HasilItem>, var listener: (HasilItem)-> Unit) :
                 itemView.tvNumber.text = item.nomor
                 itemView.tvDetail.text = item.type + " | "+item.ayat+" ayat"
                  itemView.tvAsma.text = item.asma
-                //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
                 itemView.parentCard.setOnClickListener {
-                    val bundle = Bundle()
-                    bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
-                    val i = Intent(context, WebViewActivity::class.java)
-                    i.putExtras(bundle)
-                    context.startActivity(i)
+                    val action = arrayOf("Baca", "Bookmark")
+                    val alert = AlertDialog.Builder(context)
+                    alert.setTitle("Anda ingin ?")
+                    alert.setItems(action){ dialog, i ->
+                        when(i){
+                            0 -> {
+
+                                val bundle = Bundle()
+                                bundle.putString("link", "https://quran.kemenag.go.id/sura/"+item.nomor)
+                                val i = Intent(context, WebViewActivity::class.java)
+                                i.putExtras(bundle)
+                                context.startActivity(i)
+
+                            }
+                            1 -> {
+
+                            }
+
+                        }
+
+                    }
+                    alert.create()
+                    alert.show()
+                    true
                 }
+
+                //Toast.makeText(context,item.key,Toast.LENGTH_LONG).show()
+
         }
     }
 }
