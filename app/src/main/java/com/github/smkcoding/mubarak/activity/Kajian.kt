@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.components_basic_actionbar.*
 import okhttp3.*
 import java.io.IOException
 
+
 class Kajian : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,11 +52,10 @@ class Kajian : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val body = response.body().toString()
-
+                val body = response.body()?.string()
+                Log.e("data response", body!!)
                 val gson = GsonBuilder().create()
                 val youtubelist = gson.fromJson(body, YoutubeModel::class.java)
-
                 runOnUiThread {
                     rv_horizontal_channel.adapter = YoutubeListAdapter(
                         applicationContext,
