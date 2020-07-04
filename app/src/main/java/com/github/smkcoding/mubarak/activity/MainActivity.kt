@@ -9,10 +9,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val menuTeks = arrayOf("Home","Article","Al-Quran","Profil")
+    val menuTeks = arrayOf("Home","Al-Quran","Profil")
     val menuIcons = arrayOf(
         R.drawable.ic_home,
-        R.drawable.ic_search,
         R.drawable.ic_book,
         R.drawable.ic_icn_account
     )
