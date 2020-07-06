@@ -39,6 +39,7 @@
                         android:text="someone@mail.com"
                         android:layout_gravity="center"
                         android:textColor="#ffffff"
+                        android:id="@+id/tvEmail"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/regular"
                         android:textSize="@dimen/_14ssp"

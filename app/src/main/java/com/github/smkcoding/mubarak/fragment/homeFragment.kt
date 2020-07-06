@@ -16,6 +16,7 @@ import com.github.smkcoding.mubarak.activity.KisahActivity
 import com.github.smkcoding.mubarak.activity.Kajian
 import com.github.smkcoding.mubarak.adapter.ArticleAdapter
 import com.github.smkcoding.mubarak.model.ArticleModel
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -24,6 +25,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class homeFragment : Fragment() {
     lateinit var ref : DatabaseReference
     lateinit var dataTarget : ArrayList<ArticleModel>
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,6 +39,8 @@ class homeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         ref = FirebaseDatabase.getInstance().reference
         getArticleFirebase()
+        auth = FirebaseAuth.getInstance()
+        tvEmail.text = auth.currentUser!!.email
         btMasjid.setOnClickListener {
             val intent = Intent(context, MasjidActivity::class.java)
             //intent.putExtra("year",btYear.text.toString())
