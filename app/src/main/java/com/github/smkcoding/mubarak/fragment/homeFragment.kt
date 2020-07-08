@@ -2,21 +2,21 @@ package com.github.smkcoding.mubarak.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.github.smkcoding.mubarak.activity.MasjidActivity
-import com.google.firebase.database.*
 import com.github.smkcoding.mubarak.R
 import com.github.smkcoding.mubarak.activity.DoaActivity
-import com.github.smkcoding.mubarak.activity.KisahActivity
 import com.github.smkcoding.mubarak.activity.Kajian
+import com.github.smkcoding.mubarak.activity.KisahActivity
+import com.github.smkcoding.mubarak.activity.MasjidActivity
 import com.github.smkcoding.mubarak.adapter.ArticleAdapter
 import com.github.smkcoding.mubarak.model.ArticleModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -79,7 +79,11 @@ class homeFragment : Fragment() {
                         target?.key = snapshot.key!!
                         dataTarget.add(target!!)
                     }
-                    rcArticle.layoutManager = LinearLayoutManager(requireContext())
+                    val layoutManager = LinearLayoutManager(requireContext())
+                    layoutManager.stackFromEnd = true
+                    layoutManager.reverseLayout = true
+                    rcArticle.layoutManager = layoutManager
+
                     rcArticle.adapter = ArticleAdapter(requireContext(),dataTarget){}
                 }
             })
