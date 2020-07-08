@@ -3,54 +3,54 @@
 # Auth Screen
 
 ## -> Login Screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/1_login.jpg width="200")
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/1_login.jpg" width="250">
 
 ## -> Daftar Screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/2_register.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/2_register.jpg" width="250">
 
 # Main Screen
 
 ## -> Home Screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/3_home.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/3_home.jpg" width="250">
 
 ## -> Al-quran Screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/4_quran.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/4_quran.jpg" width="250">
 
 ## -> Surah Screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/5_surah.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/5_surah.jpg" width="250">
 
 ## -> Bookmark surah
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/6_bookmark.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/6_bookmark.jpg" width="250">
 
 ## -> Artikel screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/16_artikel.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/16_artikel.jpg" width="250">
 
 ## -> Masjid screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/8_masjid.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/8_masjid.jpg" width="250">
 
 ## -> Masjid Map screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/9_masjid_map.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/9_masjid_map.jpg" width="250">
 
 ## -> Doa doa screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/10_doa.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/10_doa.jpg" width="250">
 
 ## -> Kisah Nabi List screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/12_kisah_nabi.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/12_kisah_nabi.jpg" width="250">
 
 ## -> Kisah Nabi screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/13_biografi_nabi.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/13_biografi_nabi.jpg" width="250">
 
 ## -> Kajian Mesjid screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/14_kajian.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/14_kajian.jpg" width="250">
 
 ## -> Lihat Kajian Mesjid screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/15_watch.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/15_watch.jpg" width="250">
 
 ## -> Profile screen
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/7_profile.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/7_profile.jpg" width="250">
 
 
 # Logout
 
-![alt text](https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/logout.jpg)
+<img src="https://raw.githubusercontent.com/LilZulf/Project_SMK_Coding_Team/master/blob/logout.jpg" width="250">
 
