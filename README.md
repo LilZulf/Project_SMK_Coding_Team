@@ -6,6 +6,13 @@ Link 2 https://drive.google.com/file/d/1e4-d-80pNeqzUjnWYxTyuKCA9DGY71_A/view?us
 
 Link 3 https://drive.google.com/file/d/1Kc7Ka9h-mDl-avuKjWPXFRD3uSaSRoFN/view?usp=sharing
 
+## Team 
+- Ahmad Zulfan Najib = https://github.com/LilZulf
+- Ahmad Ivan Reyhan = https://github.com/IvanReyhan22
+- Moehammad Rizki Karianata = https://github.com/RizkiKarianata
+- Geza Fiqrullah Alamsyah Vitsu Budi Wardana = https://github.com/geza909
+
+
 # Auth Screen
 
 ## -> Login Screen
